@@ -1,0 +1,11 @@
+header {
+  font-size: 13px;
+}
+
+body {
+  font-size: 12px;
+}
+body div {
+  font-size: 10px;
+  background-color: red;
+}

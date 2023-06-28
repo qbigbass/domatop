@@ -1,11 +1,4 @@
-header {
-  font-size: 13px;
-}
-
-body {
-  font-size: 12px;
-}
-body div {
+@import url(https://fonts.googleapis.com/css?family=Nunito+Sans:regular,600,700&display=swap&subset=cyrillic-ext);
+html {
   font-size: 10px;
-  background-color: red;
 }

@@ -1,11 +1,9 @@
-@import "header";
+// Подключение шрифтов
+@import url(https://fonts.googleapis.com/css?family=Nunito+Sans:regular,600,700&display=swap&subset=cyrillic-ext);
 
+$fontFamily: "Nunito Sans";
 
-body {
-    font-size: 12px;
-    div {
-        font-size: 10px;
-        background-color: red;
-        
-    }
+html {
+    font-size: 10px;
 }
+

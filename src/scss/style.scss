@@ -2,6 +2,9 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito+Sans:regular,600,700&display=swap&subset=cyrillic-ext);
 @import "fonts";
 
+// Сброс стилей
+@import "reset";
+
 // Шрифт по умолчанию
 $fontFamily: "Nunito Sans";
 
@@ -19,6 +22,22 @@ html {
 }
 body {
     font-family: $fontFamily;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+@import "header";
+
+// Основной контейнер
+._container {
+    max-width: $maxWidthContainer + px;
+    margin: 0 auto;
 }
 
 

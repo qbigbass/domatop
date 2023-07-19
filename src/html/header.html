@@ -1,13 +1,45 @@
 <header class="header">
     <div class="header__content _container">
-        <div class="header__list-cities"></div>
-        <div class="header__menu menu">
-            <div class="menu__search">
-                <a href="#" class="menu__search-link"><i class="fa-regular fa-magnifying-glass"></i><span>Поиск</span></a>
-            </div>
-            <div class="menu__feedback">
-                <a href="#" class="menu__feedback-link"><i class="fa-regular fa-message"></i><span>Обратная связь</span></a>
-            </div>      
+        <nav class="header__menu region">
+            <i class="fa-regular fa-location-pin"></i>
+            <input type="hidden" class="region__select-input" name="region" value="">
+            <div class="region__selected"><span class="region__title">Удмуртская Республика</span></div>
+            <ul class="region__list" style="display: none;">
+                <li class="region__link">
+                    <span class="region__title">Белгородская область</span>
+                </li>
+                <li class="region__link">
+                    <span class="region__title">Костромская область</span>
+                </li>
+                <li class="region__link">
+                    <span class="region__title">Московская область</span>
+                </li>
+                <li class="region__link">
+                    <span class="region__title">Мурманская область</span>
+                </li>
+                <li class="region__link">
+                    <span class="region__title">Республика Ингушетия</span>
+                </li>
+                <li class="region__link">
+                    <span class="region__title">Удмуртская Республика</span>
+                </li>
+                <li class="region__link">
+                    <span class="region__title">Пермский край</span>
+                </li>
+                <li class="region__link">
+                    <span class="region__title">Оренбургская область</span>
+                </li>
+                <li class="region__link">
+                    <span class="region__title">Хабаровский край</span>
+                </li>
+            </ul>
+            <i class="fa-solid fa-caret-up" style="display: none;"></i>
+            <i class="fa-solid fa-caret-down"></i>
+        </nav>
+        
+        <div class="header__search buttons">
+            <a href="#" class="buttons__search"><i class="fa-regular fa-magnifying-glass"></i><span>Поиск</span></a>
+            <a href="#" class="buttons__feedback"><i class="fa-regular fa-message"></i><span>Обратная связь</span></a>
         </div>  
     </div>
 </header>

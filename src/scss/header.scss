@@ -4,22 +4,67 @@
     background-color: #5E9295;
     font-size: 1.4rem;
     height: 40px;
-    &__content {
-    }
-
-    &__list-cities {
-    }
-
-    &__menu {
-        display: inline-flex;
-        gap: 24px;
-    }
-}
-
-.menu {
     color: #ACD4D6;
-    a {
+    &__content {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    &__search {
         display: inline-flex;
-        gap: 8px;
+        gap: 25px;  
+        a {
+            display: inline-flex;
+            gap: 8px;
+            &.buttons__feedback i {
+                margin-top: 1px;
+            }
+        }
     }
 }
+
+.region {
+    display: inline-flex;
+    position: relative;
+    width: 195px;
+    &__selected {
+        margin-left: 6px;
+        width: 160px;
+        cursor: pointer;
+    }
+    &__list {
+        position: absolute;
+        top: -10px;
+        left: 12px;
+        color: #FFF;
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+        background-color: #5e9295;
+        max-height: 300px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        li {
+            padding: 10px 0 10px 5px;
+        }
+    }
+    &__link {
+        cursor: pointer;
+        &.active {
+            background-color: #acd4d6;
+        }
+    }
+    &__title {
+        color: #FFF;
+    }
+    >i.fa-caret-up, >i.fa-caret-down {
+        font-size: 10px;
+        margin: 3px 0 0 2px;
+    }
+    >i.open {
+        display: none;
+    }
+}
+
+
+

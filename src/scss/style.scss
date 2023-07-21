@@ -42,9 +42,54 @@ body {
 }
 
 @media (max-width: ($md1 + px)) {
-    ._container {
+    .base-container {
         padding: 0 12px 0 12px;
     }
 }
 
+.menu-desc__wrapper {
+    background: var(--gradient, linear-gradient(180deg, #75B7BA 0%, #5E9295 100%));
+}
+
+.desc {
+    ._index & {
+        height: 583px;
+        padding-top: 40px;
+    }
+    ._index &__wrapper {
+        width: 72.92%;
+    }
+    color: #FFF;
+    &__title {
+        font-size: 4.8rem;
+        font-weight: 600;
+        line-height: 64px;
+    }
+    &__content {
+        p {
+            font-size: 2rem;
+            line-height: 2.5rem;
+        }
+        ._index & p {
+            margin-top: 29px;
+            width: 60.36%;
+        }
+    }
+    &__buttons-wrapper {
+        font-size: 1.6rem;
+        margin-top: 24px;
+        button {
+            padding: 0 24px;
+            border-radius: 8px;
+            height: 48px;
+            &:first-child {
+                background: var(--orange-orange-500, #FB8C3F);
+            }
+            &:last-child {
+                border: 1px solid var(--white, #FFF);
+                margin-left: 24px;
+            }        
+        }
+    }
+}
 

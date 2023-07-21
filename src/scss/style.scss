@@ -33,9 +33,10 @@ body {
 }
 
 @import "header";
+@import "menu";
 
 // Основной контейнер
-._container {
+.base-container {
     max-width: $maxWidthContainer + px;
     margin: 0 auto;
 }

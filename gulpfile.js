@@ -23,6 +23,7 @@ import { scss } from "./gulp/tasks/scss.js";
 import { js } from "./gulp/tasks/js.js";
 import { images } from "./gulp/tasks/images.js";
 import { copyFonts } from "./gulp/tasks/fonts.js";
+import { svgSprive } from "./gulp/tasks/svgSprive.js";
 
 // Наблюдатель за изменениями в файлах
 function watcher() {
@@ -33,12 +34,14 @@ function watcher() {
     gulp.watch(path.watch.images, images);
 }
 
+export { svgSprive }
+
 // Последовательная обработка шрифтов
 //const fonts = gulp.series(otfToTtf, fontsStyle);
 
 // Основные задачи
 //const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images));
-const mainTasks = gulp.parallel(copy, html, scss, js, images, copyFonts);
+const mainTasks = gulp.parallel(copy, html, scss, js, images, copyFonts, svgSprive);
 
 // Построение сценариев выполнения задач (последовательное выполнение)
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));

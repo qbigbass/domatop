@@ -1,11 +1,14 @@
 <div class="menu">
     <div class="menu__content base-container">
-        <div class="menu__logo logo">
-            <svg>
-                <use xlink:href="img/icons/icons.svg#logo_header"></use>
-            </svg>  
-            <span>Дома.топ</span>
-        </div>
+        <a href="/">
+            <div class="menu__logo logo">
+                <svg>
+                    <use xlink:href="img/icons/icons.svg#logo_header"></use>
+                </svg>
+                <span>Дома.топ</span>
+            </div>
+        </a>
+        <!-- Меню для десктопов -->
         <div class="menu__wrapper">
             <div class="menu__main-menu">
                 <ul class="menu__list">
@@ -16,12 +19,12 @@
                         <a href="#" class="menu__link">Дома</a>
                     </li>
                     <li class="menu__item">
-                        <a href="#" class="menu__link">Рейтинг УК</a>
+                        <a href="rating.html" class="menu__link">Рейтинг УК</a>
                     </li>
                     <li class="menu__item">
                         <a href="#" class="menu__link">Статьи и новости ЖКХ</a>
                     </li>
-                </ul>        
+                </ul>
             </div>
             <div class="menu__button">
                 <button>
@@ -29,5 +32,48 @@
                 </button>
             </div>
         </div>
+        <i class="fa-regular fa-bars burger-icon burger-close"></i>
     </div>
+</div>
+<!-- Адаптивное меню-->
+<div class="burger base-container">
+    <div class="burger__header">
+        <a href="/">
+            <div class="menu__logo logo">
+                <svg>
+                    <use xlink:href="img/icons/icons.svg#logo_header"></use>
+                </svg>
+                <span>Дома.топ</span>
+            </div>
+        </a>
+        <i class="fa-regular fa-xmark burger-icon burger-open"></i>
+    </div>
+    <nav class="burger__menu">
+        <ul class="burger__list">
+            <li class="burger__item">
+                <a href="#" class="burger__link">О проекте</a>
+            </li>
+            <li class="burger__item">
+                <a href="#" class="burger__link">Дома</a>
+            </li>
+            <li class="burger__item">
+                <a href="rating.html" class="burger__link">Рейтинг УК</a>
+            </li>
+            <li class="burger__item">
+                <a href="#" class="burger__link">Статьи и новости ЖКХ</a>
+            </li>
+            <li class="burger__item">
+                <a href="#" class="burger__link">Заявка в единую диспетчерскую</a>
+            </li>
+            <li class="burger__item">
+                <a href="#" class="burger__link">Методика расчета рейтинга</a>
+            </li>
+            <li class="burger__item">
+                <a href="#" class="burger__link">Публичная оферта</a>
+            </li>
+            <li class="burger__item">
+                <a href="#" class="burger__link">Обратная связь</a>
+            </li>
+        </ul>
+    </nav>
 </div>

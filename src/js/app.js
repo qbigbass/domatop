@@ -28,6 +28,35 @@ $(function() {
         $(this).parent().parent().find('.fa-caret-down').show();
         $(this).addClass('active');
     });
+
+    $(document).on('click', function (e) {
+        if (!$(e.target).closest('.region').length) {
+            $('.region__selected').removeClass('open');
+            $('.region__list').fadeOut();
+            $('.region').find('.fa-caret-up').hide();
+            $('.region').find('.fa-caret-down').show();
+        }
+    });
+
+    // Реализация для адаптивного меню (бургер)
+    $('.burger-close').on('click', function(){
+        $('.burger').show();
+        $('.burger').addClass('open');
+    });
+
+    $('.burger-open').on('click', function(){
+        $('.burger').hide();
+        $('.burger').removeClass('open');
+    });
+
+    $(document).on('click', function (e) {
+        if (!$(e.target).closest('.burger').length && !$(e.target).hasClass('burger-close')) {
+            if ($('.burger').hasClass('open')) {
+                $('.burger').hide();
+                $('.burger').removeClass('open');
+            }
+        }
+    });
 });
 
 

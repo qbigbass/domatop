@@ -3,7 +3,7 @@
     height: 113px;
     color: #FFF;
     padding-top: 57px;
-    
+
     &__content {
         display: flex;
         width: 100%;
@@ -13,6 +13,7 @@
     &__logo {
         display: flex;
         gap: 12px;
+
         svg {
             width: 32px;
             height: 32px;
@@ -21,6 +22,10 @@
 
     &__wrapper {
         display: flex;
+
+        @media (max-width: ($md3 + px)) {
+            display: none;
+        }
     }
 
     &__list {
@@ -32,6 +37,7 @@
 
     &__button {
         margin-left: 32px;
+
         button {
             height: 30px;
             font-size: 1.4rem;
@@ -40,10 +46,58 @@
             border: 1px solid var(--white, #FFF);
             line-height: 1.4rem;
         }
-    } 
+    }
 }
 
 .logo span {
     font-size: 2.4rem;
     font-weight: 700;
+    padding-top: 1px;
+}
+
+.burger,
+.burger-icon {
+    display: none;
+}
+
+@media (max-width: ($md3 + px)) {
+    .menu {
+        padding-top: 26px;
+    }
+
+    .burger {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+        color: #fff;
+        background: #5E9295;
+
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 66px;
+            height: 153px;
+        }
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+            font-size: 1.6rem;
+        }
+
+        &__item {
+            height: 54px;
+        }
+    }
+
+    .burger-icon {
+        display: block;
+        width: 21px;
+        height: 24px;
+        font-size: 24px;
+        position: relative;
+        top: 7px;
+        right: 11px;
+    }
 }

@@ -14,12 +14,13 @@ $maxWidth: 1920;
 $maxWidthContainer: 1200;
 $md1: $maxWidthContainer + 12;
 $md2: 991.98;
-$md3: 767.98;
+$md3: 929.98;
 $md4: 479.98;
 
 html {
     font-size: 10px;
 }
+
 body {
     font-family: $fontFamily;
 }
@@ -43,7 +44,7 @@ body {
 
 @media (max-width: ($md1 + px)) {
     .base-container {
-        padding: 0 12px 0 12px;
+        padding: 0 16px 0 16px;
     }
 }
 
@@ -52,44 +53,126 @@ body {
 }
 
 .desc {
+    padding-top: 40px;
+
+    @media (max-width: ($md3 + px)) {
+        padding-top: 0;
+    }
+
     ._index & {
         height: 583px;
-        padding-top: 40px;
+
+        @media (max-width: ($md3 + px)) {
+            height: 482px;
+
+        }
     }
+
+    ._rating & {
+        height: 433px;
+
+        @media (max-width: ($md3 + px)) {
+            height: 287px;
+
+        }
+    }
+
+    &__wrapper {
+
+        width: 100%;
+
+    }
+
     ._index &__wrapper {
         width: 72.92%;
+
+        @media (max-width: ($md3 + px)) {
+            width: 100%;
+        }
     }
+
     color: #FFF;
+
     &__title {
         font-size: 4.8rem;
         font-weight: 600;
         line-height: 64px;
+
+        @media (max-width: ($md3 + px)) {
+            font-size: 2.4rem;
+            line-height: 32px;
+        }
     }
+
     &__content {
         p {
+            margin-top: 29px;
             font-size: 2rem;
             line-height: 2.5rem;
+
+            @media (max-width: ($md3 + px)) {
+                font-size: 1.4rem;
+                line-height: 2rem;
+            }
         }
+
+
         ._index & p {
-            margin-top: 29px;
+
             width: 60.36%;
+
+            @media (max-width: ($md3 + px)) {
+                width: 100%;
+                margin-top: 17px;
+            }
         }
     }
+
     &__buttons-wrapper {
         font-size: 1.6rem;
         margin-top: 24px;
+
+        @media (max-width: ($md3 + px)) {
+            display: flex;
+            flex-direction: column-reverse;
+            font-size: 1.4rem;
+            margin-top: 23px;
+            gap: 25px;
+        }
+
         button {
             padding: 0 24px;
             border-radius: 8px;
             height: 48px;
+
+            @media (max-width: ($md3 + px)) {
+                padding: 0 12px 0 11px;
+                height: 40px;
+            }
+
             &:first-child {
                 background: var(--orange-orange-500, #FB8C3F);
+
+                @media (max-width: ($md3 + px)) {
+                    width: 103px;
+                }
             }
+
             &:last-child {
                 border: 1px solid var(--white, #FFF);
                 margin-left: 24px;
-            }        
+
+                @media (max-width: ($md3 + px)) {
+                    margin-left: 0;
+                    width: 210px;
+                }
+            }
+
+            ._rating & {
+                margin-left: 0;
+                border: none;
+            }
+
         }
     }
 }
-

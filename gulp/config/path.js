@@ -22,7 +22,7 @@ export const path = {
         html: `${srcFolder}/*.html`,
         fonts: `${srcFolder}/fonts/*.*`,
         files: `${srcFolder}/files/**/*.*`,
-        svgicons: `${srcFolder}/svgicons/*.svg`
+        svgicons: `${srcFolder}/svgicons/**/*.svg`
     },
     watch: {
         js: `${srcFolder}/js/**/*.js`,

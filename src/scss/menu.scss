@@ -13,6 +13,11 @@
     &__logo {
         display: flex;
         gap: 12px;
+        margin-top: -8px;
+
+        @media (max-width: ($md3 + px)) {
+            margin-top: 3px;
+        }
 
         svg {
             width: 32px;

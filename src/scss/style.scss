@@ -50,6 +50,10 @@ body {
 
 .menu-desc__wrapper {
     background: url("../img/cityskyline_main.webp") 50% 100% repeat-x, linear-gradient(180deg, #75B7BA 0%, #5E9295 100%);
+
+    ._detail_uk & {
+        background: url("../img/cityskyline_main.webp") 50% 0 repeat-x, linear-gradient(180deg, #75B7BA 0%, #5E9295 100%);
+    }
 }
 
 .desc {
@@ -60,27 +64,27 @@ body {
     }
 
     ._index & {
-        height: 583px;
+        margin-bottom: 240px;
 
         @media (max-width: ($md3 + px)) {
-            height: 482px;
-
+            margin-bottom: 181px;
         }
     }
 
     ._rating & {
-        height: 433px;
+        margin-bottom: 170.5px;
 
         @media (max-width: ($md3 + px)) {
-            height: 287px;
-
+            margin-bottom: 56px;
         }
     }
 
+    ._detail_uk & {
+        margin-bottom: 45px;
+    }
+
     &__wrapper {
-
         width: 100%;
-
     }
 
     ._index &__wrapper {
@@ -88,6 +92,33 @@ body {
 
         @media (max-width: ($md3 + px)) {
             width: 100%;
+        }
+    }
+
+    ._detail_uk &__wrapper {
+        display: inline-flex;
+
+        img {
+            width: 72px;
+            height: 72px;
+            margin-right: 32px;
+        }
+
+        h1 {
+            display: flex;
+            flex-wrap: wrap;
+            width: 66.3%;
+        }
+
+        span:nth-child(3) {
+            font-size: 2rem;
+            margin-right: 24px;
+            margin-top: 33px;
+        }
+
+        span:nth-child(4) {
+            font-size: 4.8rem;
+            margin-top: 10px;
         }
     }
 
@@ -125,6 +156,10 @@ body {
                 width: 100%;
                 margin-top: 17px;
             }
+        }
+
+        ._rating & p {
+            margin-top: 25px;
         }
     }
 
@@ -165,6 +200,10 @@ body {
                 @media (max-width: ($md3 + px)) {
                     margin-left: 0;
                     width: 210px;
+
+                    ._rating & {
+                        width: 235px;
+                    }
                 }
             }
 
